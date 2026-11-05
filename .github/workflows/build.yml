@@ -167,7 +167,7 @@ jobs:
             tools/bazel run //common-modules/virtual-device:virtual_device_aarch64_dist \
               -- --dist_dir="$DIST" 2>&1 | tail -80
           fi
-          echo "--- dist ---"; ls -la "$DIST" | head -30
+          echo "--- dist ---"; ls -la "$DIST" | head -30 || true
 
       - name: Verify KernelSU made it into the build
         run: |
